@@ -1,39 +1,50 @@
-ImranX site: deploy folder
+ImranX SITE: DEPLOY FOLDER
 ==========================
-index.html    homepage (edit BIRTH, GALLERY, GALLERY_ALT, FORM_ENDPOINT in the script at the bottom)
-blog.html     blog list, Bangla + English
-post.html     Bangla post template (copy it for each new post)
-post-en.html  English post template
-404.html      "page not found" page
-style.css, site.js   shared styles and script. The SITE block at the top of site.js holds your email, phone and social links.
-favicon.svg, favicon.ico, favicon-48.png, apple-touch-icon.png, icon-192/512.png, site.webmanifest   tab and phone icons.
-              To use your own logo, replace these files with square versions of it (same names).
-robots.txt, sitemap.xml, llms.txt, _headers   search engine / AI / hosting files
-images/       portrait.jpg, gallery-1..9.jpg, og-cover.jpg (1200x630 share image)
-images/blog/  feature images for posts (1280x720)
 
-BEFORE YOU PUBLISH
-1. Domain: the files assume https://imranx.com. If your address is different, find and replace
-   "https://imranx.com" in index.html, blog.html, post.html, post-en.html, robots.txt, sitemap.xml, llms.txt.
-2. Add images/og-cover.jpg (1200x630). It is the picture shown when the homepage or blog is shared.
-3. Replace the sample post text, then submit https://yourdomain/sitemap.xml in Google Search Console and Bing Webmaster Tools.
+FILES
+  index.html     homepage. Edit BIRTH, GALLERY and FORM_ENDPOINT in the script at the bottom.
+  blog.html      blog list (Bangla + English), with topic filters and search.
+  ai-chatbot-brand-sales.html, ai-ecommerce-website-sales.html, why-data-ai-projects-fail.html,
+  quran-verify-news-deepfake.html           Bangla articles
+  data-science-improve-sales.html, holy-quran-light-over-darkness.html     English articles
+  style.css, site.js   shared styles and script. The SITE block at the top of site.js holds your
+                       email, phone and social links.
+  404.html, favicon and icon files, site.webmanifest, robots.txt, sitemap.xml, llms.txt, _headers
+  images/        your photos, og-cover.jpg, and images/blog/ (one feature image per article)
 
-ADD A NEW POST
-1. Copy post.html (Bangla) or post-en.html (English) to a short English file name, e.g. ai-ethics.html.
-2. Edit the text. Then update the block marked "POST SEO" in the <head>: title, description, canonical,
-   og:url, og:title, og:description, og:image, article:published_time and the JSON-LD (headline, description, image, dates, url).
-3. In blog.html copy one <a class="row"> block, point href to the new file, and set data-c (topic) and data-l (bn or en).
-4. Optional: copy a <a class="post"> card in index.html to show it on the homepage (keep three).
-5. Add a <url> line for it in sitemap.xml. Use the address without .html (e.g. /ai-ethics).
-6. Update the previous/next boxes at the bottom of the post.
+BEFORE YOU PUBLISH (3 things only you can do)
+  1. Open site.js and replace the email, phone and phoneLabel in the SITE block at the top.
+  2. Make sure your own photos are in the images folder with the exact file names used in index.html.
+  3. Read the six articles once and adjust any wording to your own voice. Check the Quran references
+     against your trusted translation.
 
-CONTACT FORM EMAILS
-Create a free form at Web3Forms or Formspree that delivers to your email, then paste its URL into FORM_ENDPOINT in index.html.
+PUBLISH (GitHub + Cloudflare Pages)
+  1. Unzip this file. Open the unzipped folder.
+  2. On GitHub open your repository, click Add file > Upload files.
+  3. Select everything INSIDE the folder (files and the images folder, not the outer folder) and drag it in.
+     Files with the same name replace the old ones. Your own photos already in images/ stay.
+  4. Click Commit changes.
+  5. Delete the two old sample pages: open post.html, click the three dots (top right) > Delete file > Commit.
+     Do the same for post-en.html.
+  6. Cloudflare Pages redeploys by itself in about a minute (Workers & Pages > your project > Deployments
+     should say Success). Hard refresh the site (Ctrl+Shift+R).
+  7. In Google Search Console and Bing Webmaster Tools, submit https://imranx.com/sitemap.xml.
 
-COMMENTS
-Free via Giscus (giscus.app): enable GitHub Discussions on a public repo, install the Giscus app, and copy repo, repoId,
-category and categoryId into SITE.giscus in site.js.
+ADD A NEW ARTICLE LATER
+  1. Copy an existing article (Bangla: ai-ecommerce-website-sales.html, English: data-science-improve-sales.html)
+     to a short English file name, e.g. my-topic.html.
+  2. In the new file change: the block marked "POST SEO" in the <head> (title, description, canonical, og:*,
+     JSON-LD), the header (category, title, lead, date, reading time), the feature image name, the text, tags
+     and the previous/next boxes.
+  3. Put a 1280x720 feature image at images/blog/my-topic.jpg.
+  4. In blog.html copy one <a class="row"> block and edit it (data-c = topic chip, data-l = bn or en).
+  5. Add a <url> line in sitemap.xml and a line in llms.txt.
+  6. To feature it on the homepage, edit the three cards in the BLOG section of index.html.
 
-DEPLOY
-Put the folder in a GitHub repository and connect it to Cloudflare Pages (Workers & Pages > Create > Pages > Connect to Git).
-Build command: leave empty. Output directory: /
+OTHER SETTINGS
+  Contact form emails: create a free form at Web3Forms or Formspree that delivers to your email, then paste its
+  URL into FORM_ENDPOINT in index.html.
+  Comments: free via Giscus (giscus.app). Enable GitHub Discussions on a public repo, install the Giscus app,
+  and copy repo, repoId, category and categoryId into SITE.giscus in site.js.
+  Address: the files assume https://imranx.com. If yours is different, find and replace it in all .html files,
+  robots.txt, sitemap.xml and llms.txt.

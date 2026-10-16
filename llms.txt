@@ -1,15 +1,23 @@
 # ImranX (Md Imran Sardar)
 
-> Personal site of Md Imran Sardar, a computer engineer, web and AI engineer and brand strategist working in the Department of CSE, BUET, Dhaka, Bangladesh. He builds scalable cloud, AI and web systems and writes about technology, AI ethics and branding in Bangla and English.
+> Personal site of Md Imran Sardar, a computer engineer, web and AI engineer and brand strategist working in the Department of CSE, BUET, Dhaka, Bangladesh. He builds scalable cloud, AI and web systems and writes about technology, data science, AI, e-commerce and the Quran in Bangla and English.
 
 ## About
-- Focus areas: AI and cloud, web engineering, international branding.
-- Experience: Web/AI Engineer (2022 to present), Web Developer (2018 to 2022), Tech Content Writer (2017 to 2018).
+- Focus areas: AI and cloud, web engineering, data science, international branding.
+- Experience: Web/AI Engineer (2022 to present), Web Developer (2018 to 2022), Tech Content Writer (2013 to 2018).
 - Education and training: M.Sc in Engg. (CSE), B.Sc in ICT, Applied Machine Learning (BUET), Data Analytics (University of Dhaka), CS50 and AI (Harvard), Google Educator, CNN iReporter.
 
 ## Pages
 - [Home](https://imranx.com/): about, education, experience, services, work, gallery and contact.
-- [Blog](https://imranx.com/blog): articles in Bangla and English on AI, web engineering and branding.
+- [Blog](https://imranx.com/blog): articles in Bangla and English.
+
+## Articles
+- [How Data Science Can Improve Sales of Your Business](https://imranx.com/data-science-improve-sales): Practical ways data science grows sales: know your best customers, predict repeat orders, forecast demand and price smarter, using data you already have.
+- [The Holy Quran: Light Over Darkness](https://imranx.com/holy-quran-light-over-darkness): Why I believe the Holy Quran is the light that brings people out of darkness, and how it speaks to doubt and information overload today.
+- [যাচাই না করে বিশ্বাস নয়: ডিপফেকের যুগে কুরআনের শিক্ষা](https://imranx.com/quran-verify-news-deepfake): ডিপফেক ও ভুয়া খবরের যুগে সংবাদ যাচাই নিয়ে কুরআনের নির্দেশনা এবং আজ থেকেই মানার মতো পাঁচটি সহজ অভ্যাস।
+- [কেন বেশিরভাগ ডেটা ও এআই প্রকল্প ব্যর্থ হয়?](https://imranx.com/why-data-ai-projects-fail): ডেটা ও এআই প্রকল্প ব্যর্থ হওয়ার সাতটি সাধারণ কারণ এবং ব্যর্থতা এড়ানোর সহজ একটি চেকলিস্ট।
+- [এআই যুগে ই-কমার্স ওয়েবসাইট কীভাবে আপনার ব্যবসার সেলস বাড়াবে?](https://imranx.com/ai-ecommerce-website-sales): নিজস্ব ই-কমার্স ওয়েবসাইট ও এআই একসঙ্গে কীভাবে বিক্রি, গ্রাহকের আস্থা ও পুনরায় কেনার হার বাড়ায়, আর শুরু করার বাস্তব ধাপগুলো।
+- [এআই চ্যাটবট কীভাবে আপনার ব্র্যান্ড ভ্যালু ও সেলস বাড়াতে পারে?](https://imranx.com/ai-chatbot-brand-sales): দ্রুত উত্তর, ২৪/৭ সেবা ও ব্যক্তিগত পরামর্শ দিয়ে এআই চ্যাটবট কীভাবে গ্রাহকের আস্থা ও বিক্রি বাড়ায়, আর শুরু করার সহজ ধাপগুলো।
 
 ## Profiles
 - [Facebook](https://www.facebook.com/imransardarx)

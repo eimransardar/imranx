@@ -5,7 +5,7 @@ var SITE = {
   phoneLabel: "+88 01712-200886",           // how the number is displayed
   socials: {                                // leave a link empty ("") to hide that icon
     facebook: "https://www.facebook.com/imransardarx",
-    x: "https://x.com/itsardar",                                  // e.g. https://x.com/yourhandle
+    x: "https://x.com/imranxsardar",                                  // e.g. https://x.com/yourhandle
     linkedin: "https://www.linkedin.com/in/imranxs/",
     medium: "https://medium.com/@isardar",                       // e.g. https://medium.com/@yourhandle
     youtube: "https://www.youtube.com/@engineerimransardar"      // e.g. https://www.youtube.com/@yourchannel
