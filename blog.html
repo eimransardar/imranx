@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>ব্লগ – এআই, ওয়েব ও ব্র্যান্ডিং | ImranX</title>
+<meta name="description" content="ইমরান সরদারের ব্লগ: এআই, ক্লাউড, ওয়েব ইঞ্জিনিয়ারিং ও ব্র্যান্ডিং নিয়ে বাংলা ও ইংরেজি লেখা।">
+<link rel="canonical" href="https://imranx.com/blog">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ImranX">
+<meta property="og:locale" content="bn_BD">
+<meta property="og:title" content="ব্লগ – এআই, ওয়েব ও ব্র্যান্ডিং | ImranX">
+<meta property="og:description" content="ইমরান সরদারের ব্লগ: এআই, ক্লাউড, ওয়েব ইঞ্জিনিয়ারিং ও ব্র্যান্ডিং নিয়ে বাংলা ও ইংরেজি লেখা।">
+<meta property="og:url" content="https://imranx.com/blog">
+<meta property="og:image" content="https://imranx.com/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#2457f5">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://imranx.com/blog#blog",
+  "url": "https://imranx.com/blog",
+  "name": "ImranX ব্লগ",
+  "description": "ইমরান সরদারের ব্লগ: এআই, ক্লাউড, ওয়েব ইঞ্জিনিয়ারিং ও ব্র্যান্ডিং নিয়ে বাংলা ও ইংরেজি লেখা।",
+  "inLanguage": [
+    "bn",
+    "en"
+  ],
+  "author": {
+    "@id": "https://imranx.com/#person"
+  },
+  "publisher": {
+    "@id": "https://imranx.com/#person"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="index.html">Imran<span>X</span></a>
+    <nav id="nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="থিম পরিবর্তন করুন">◐</button>
+      <button class="icon-btn" id="menuBtn" type="button" aria-label="মেনু খুলুন" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="blog-head">
+    <p class="eyebrow">Blog</p>
+    <h1>লেখালেখি</h1>
+    <p>প্রযুক্তি, এআই, ওয়েব ইঞ্জিনিয়ারিং ও ব্র্যান্ডিং নিয়ে আমার ভাবনা ও অভিজ্ঞতা।</p>
+  </div>
+
+  <div class="tools">
+    <div class="chips" id="chips" role="group" aria-label="বিষয় অনুযায়ী ফিল্টার">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">সব</button>
+      <button class="chip" type="button" data-f="এআই" aria-pressed="false">এআই</button>
+      <button class="chip" type="button" data-f="ওয়েব" aria-pressed="false">ওয়েব</button>
+      <button class="chip" type="button" data-f="ব্র্যান্ড" aria-pressed="false">ব্র্যান্ড</button>
+    </div>
+    <div class="chips" id="langs" role="group" aria-label="ভাষা অনুযায়ী ফিল্টার">
+      <button class="chip" type="button" data-l="all" aria-pressed="true">সব ভাষা</button>
+      <button class="chip" type="button" data-l="bn" aria-pressed="false">বাংলা</button>
+      <button class="chip" type="button" data-l="en" aria-pressed="false">English</button>
+    </div>
+    <input class="search" id="q" type="search" placeholder="লেখা খুঁজুন…" aria-label="লেখা খুঁজুন">
+  </div>
+
+  <!-- Each post is one <a class="row"> below. Copy a row for a new post. data-c = topic, data-l = bn or en. -->
+  <div class="list" id="list">
+    <a class="row" href="post.html" lang="bn" data-c="এআই" data-l="bn">
+      <span class="date"><time datetime="2026-10-16">১৬ অক্টোবর ২০২৬</time> · ৬ মিনিট</span>
+      <div>
+        <img class="fi" src="images/blog/ai-ethics.jpg" alt="এআই সিস্টেম তৈরিতে নৈতিকতা শুরু থেকেই কেন জরুরি" width="1280" height="720" loading="lazy" onerror="this.remove()">
+        <h2>এআই সিস্টেম তৈরিতে নৈতিকতা শুরু থেকেই কেন জরুরি</h2>
+        <p>নৈতিক সীমারেখা চালুর আগের চেকলিস্টে নয়, সিস্টেমের কাঠামোতেই থাকা উচিত।</p>
+      </div>
+      <span class="cat">এআই</span>
+    </a>
+    <a class="row" href="post.html" lang="bn" data-c="ওয়েব" data-l="bn">
+      <span class="date"><time datetime="2026-09-22">২২ সেপ্টেম্বর ২০২৬</time> · ৮ মিনিট</span>
+      <div>
+        <img class="fi" src="images/blog/cloud-web-apps.jpg" alt="ক্লাউড-নেটিভ ওয়েব অ্যাপ: দ্রুত ও টেকসই রাখার উপায়" width="1280" height="720" loading="lazy" onerror="this.remove()">
+        <h2>ক্লাউড-নেটিভ ওয়েব অ্যাপ: দ্রুত ও টেকসই রাখার উপায়</h2>
+        <p>ক্যাশিং, কিউ ও মনিটরিংয়ের কিছু বাস্তব নিয়ম, ছোট টিমের জন্য।</p>
+      </div>
+      <span class="cat">ওয়েব</span>
+    </a>
+    <a class="row" href="post.html" lang="bn" data-c="ব্র্যান্ড" data-l="bn">
+      <span class="date"><time datetime="2026-08-14">১৪ আগস্ট ২০২৬</time> · ৫ মিনিট</span>
+      <div>
+        <img class="fi" src="images/blog/global-brand.jpg" alt="আন্তর্জাতিক বাজারের জন্য ব্র্যান্ড গড়ার ধাপ" width="1280" height="720" loading="lazy" onerror="this.remove()">
+        <h2>আন্তর্জাতিক বাজারের জন্য ব্র্যান্ড গড়ার ধাপ</h2>
+        <p>পজিশনিং, গল্প বলা ও আস্থা তৈরির সংকেত, বিভিন্ন সংস্কৃতির দর্শকের জন্য।</p>
+      </div>
+      <span class="cat">ব্র্যান্ড</span>
+    </a>
+    <a class="row" href="post-en.html" lang="en" data-c="এআই" data-l="en">
+      <span class="date"><time datetime="2026-10-10">10 October 2026</time> · 5 min</span>
+      <div>
+        <img class="fi" src="images/blog/ai-ethics-en.jpg" alt="Ethics in AI systems starts at the architecture level" width="1280" height="720" loading="lazy" onerror="this.remove()">
+        <h2>Ethics in AI systems starts at the architecture level</h2>
+        <p>A short English sample post. Duplicate post-en.html for each English article.</p>
+      </div>
+      <span class="cat">এআই</span>
+    </a>
+  </div>
+  <p class="empty" id="empty" hidden>কোনো লেখা পাওয়া যায়নি।</p>
+</main>
+
+<footer>
+  <span>© ২০২৬ Engineer Md Imran Sardar</span>
+  <div class="social" data-social></div>
+  <span><a href="index.html">← হোমে ফিরুন</a></span>
+</footer>
+</div>
+
+<script src="site.js"></script>
+<script>
+/* Filtering only. The posts themselves are plain HTML above, so search engines read them directly. */
+var rows = [].slice.call(document.querySelectorAll("#list .row")), filter = "all", lang = "all", query = "";
+function render() {
+  var q = query.trim().toLowerCase(), n = 0;
+  rows.forEach(function (r) {
+    var ok = (filter === "all" || r.dataset.c === filter) && (lang === "all" || r.dataset.l === lang) && (!q || r.textContent.toLowerCase().indexOf(q) > -1);
+    r.hidden = !ok; if (ok) n++;
+  });
+  document.getElementById("empty").hidden = n > 0;
+}
+function pick(boxId, attr, set) {
+  document.getElementById(boxId).addEventListener("click", function (e) {
+    var btn = e.target.closest(".chip"); if (!btn) return;
+    document.querySelectorAll("#" + boxId + " .chip").forEach(function (c) { c.setAttribute("aria-pressed", String(c === btn)); });
+    set(btn.dataset[attr]); render();
+  });
+}
+pick("chips", "f", function (v) { filter = v; });
+pick("langs", "l", function (v) { lang = v; });
+document.getElementById("q").addEventListener("input", function (e) { query = e.target.value; render(); });
+</script>
+</body>
+</html>

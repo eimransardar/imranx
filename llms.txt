@@ -1,0 +1,16 @@
+# ImranX (Md Imran Sardar)
+
+> Personal site of Md Imran Sardar, a computer engineer, web and AI engineer and brand strategist working in the Department of CSE, BUET, Dhaka, Bangladesh. He builds scalable cloud, AI and web systems and writes about technology, AI ethics and branding in Bangla and English.
+
+## About
+- Focus areas: AI and cloud, web engineering, international branding.
+- Experience: Web/AI Engineer (2022 to present), Web Developer (2018 to 2022), Tech Content Writer (2017 to 2018).
+- Education and training: M.Sc in Engg. (CSE), B.Sc in ICT, Applied Machine Learning (BUET), Data Analytics (University of Dhaka), CS50 and AI (Harvard), Google Educator, CNN iReporter.
+
+## Pages
+- [Home](https://imranx.com/): about, education, experience, services, work, gallery and contact.
+- [Blog](https://imranx.com/blog): articles in Bangla and English on AI, web engineering and branding.
+
+## Profiles
+- [Facebook](https://www.facebook.com/imransardarx)
+- [LinkedIn](https://www.linkedin.com/in/imranxs/)
