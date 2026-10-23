@@ -81,7 +81,9 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+<link rel="preload" as="image" href="images/Portrait_Engineer_Md_Imran_Sardar.jpg" fetchpriority="high">
 <link rel="stylesheet" href="style.css">
 <style>
 /* Homepage-only styles. Shared header, buttons, tokens and footer live in style.css. */
@@ -242,7 +244,7 @@ textarea { min-height: 140px; resize: vertical; }
     <!-- Your portrait: images/Portrait_Engineer_Md_Imran_Sardar.jpg. If the file is missing, the initials show instead. -->
     <div class="portrait">
       <b aria-hidden="true">MI</b>
-      <img src="images/Portrait_Engineer_Md_Imran_Sardar.jpg" alt="Md Imran Sardar, computer engineer and brand strategist" width="800" height="1000" onerror="this.remove()">
+      <img src="images/Portrait_Engineer_Md_Imran_Sardar.jpg" alt="Md Imran Sardar, computer engineer and brand strategist" width="800" height="1000" fetchpriority="high" decoding="async" onerror="this.remove()">
     </div>
   </section>
 
@@ -354,7 +356,7 @@ textarea { min-height: 140px; resize: vertical; }
       <a class="post" href="ai-chatbot-brand-sales.html" lang="bn">
         <div class="thumb"><span>এআই</span><img src="images/blog/ai-chatbot-brand-sales.jpg" alt="এআই চ্যাটবট কীভাবে আপনার ব্র্যান্ড ভ্যালু ও সেলস বাড়াতে পারে?" width="1280" height="720" loading="lazy" onerror="this.remove()"></div>
         <div class="body">
-          <div class="meta"><time datetime="2026-10-16">২৬ সেপ্টেম্বর ২০২৬</time><span>৪ মিনিট</span></div>
+          <div class="meta"><time datetime="2026-09-26">২৬ সেপ্টেম্বর ২০২৬</time><span>৪ মিনিট</span></div>
           <h3>এআই চ্যাটবট কীভাবে আপনার ব্র্যান্ড ভ্যালু ও সেলস বাড়াতে পারে?</h3>
           <p>দ্রুত উত্তর, ২৪/৭ সেবা ও ব্যক্তিগত পরামর্শ দিয়ে এআই চ্যাটবট কীভাবে গ্রাহকের আস্থা ও বিক্রি বাড়ায়, আর শুরু করার সহজ ধাপগুলো।</p>
           <span class="more">পড়ুন →</span>
@@ -363,7 +365,7 @@ textarea { min-height: 140px; resize: vertical; }
       <a class="post" href="ai-ecommerce-website-sales.html" lang="bn">
         <div class="thumb"><span>ওয়েব</span><img src="images/blog/ai-ecommerce-website-sales.jpg" alt="এআই যুগে ই-কমার্স ওয়েবসাইট কীভাবে আপনার ব্যবসার সেলস বাড়াবে?" width="1280" height="720" loading="lazy" onerror="this.remove()"></div>
         <div class="body">
-          <div class="meta"><time datetime="2026-10-16">১০ ডিসেম্বর ২০২৫</time><span>৫ মিনিট</span></div>
+          <div class="meta"><time datetime="2025-12-10">১০ ডিসেম্বর ২০২৫</time><span>৫ মিনিট</span></div>
           <h3>এআই যুগে ই-কমার্স ওয়েবসাইট কীভাবে আপনার ব্যবসার সেলস বাড়াবে?</h3>
           <p>নিজস্ব ই-কমার্স ওয়েবসাইট ও এআই একসঙ্গে কীভাবে বিক্রি, গ্রাহকের আস্থা ও পুনরায় কেনার হার বাড়ায়, আর শুরু করার বাস্তব ধাপগুলো।</p>
           <span class="more">পড়ুন →</span>
@@ -372,7 +374,7 @@ textarea { min-height: 140px; resize: vertical; }
       <a class="post" href="data-science-improve-sales.html" lang="en">
         <div class="thumb"><span>Data Science</span><img src="images/blog/data-science-improve-sales.jpg" alt="How Data Science Can Improve Sales of Your Business" width="1280" height="720" loading="lazy" onerror="this.remove()"></div>
         <div class="body">
-          <div class="meta"><time datetime="2026-10-16">12 February 2024</time><span>6 min read</span></div>
+          <div class="meta"><time datetime="2024-02-12">12 February 2024</time><span>6 min read</span></div>
           <h3>How Data Science Can Improve Sales of Your Business</h3>
           <p>Practical ways data science grows sales: know your best customers, predict repeat orders, forecast demand and price smarter, using data you already have.</p>
           <span class="more">Read →</span>
@@ -498,12 +500,13 @@ setInterval(tick, reduce ? 1000 : 80);
       grid.appendChild(b);
     });
   }
-  GALLERY.forEach(function (g, i) {
+  function probe() { GALLERY.forEach(function (g, i) {
     var t = new Image();
     t.onload = function () { found[i] = { src: g.src, alt: g.alt || "Photo of Md Imran Sardar" }; if (!--pending) { found = found.filter(Boolean); draw(); } };
     t.onerror = function () { if (!--pending) { found = found.filter(Boolean); draw(); } };
     t.src = g.src;
-  });
+  }); }
+  if (document.readyState === "complete") probe(); else addEventListener("load", probe);
   if (!GALLERY.length) draw();
   function close() { $("lightbox").hidden = true; $("lbImg").removeAttribute("src"); }
   $("lbClose").addEventListener("click", close);
