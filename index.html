@@ -81,8 +81,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700&family=Hanken+Grotesk:wght@400;600&family=Hind+Siliguri:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700&family=Hanken+Grotesk:wght@400;600&family=Hind+Siliguri:wght@400;600&family=JetBrains+Mono:wght@400&display=swap"></noscript>
 <link rel="preload" as="image" href="images/Portrait_Engineer_Md_Imran_Sardar.jpg" fetchpriority="high">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -494,17 +494,26 @@ setInterval(tick, reduce ? 1000 : 80);
     }
     found.forEach(function (o) {
       var b = document.createElement("button"); b.type = "button"; b.className = "shot"; b.setAttribute("aria-label", "Open photo");
-      var im = document.createElement("img"); im.src = o.src; im.alt = o.alt; im.loading = "lazy";
+      var im = document.createElement("img"); im.src = o.thumb; im.alt = o.alt; im.loading = "lazy"; im.decoding = "async";
       b.appendChild(im);
       b.addEventListener("click", function () { $("lbImg").src = o.src; $("lbImg").alt = o.alt; $("lightbox").hidden = false; $("lbClose").focus(); });
       grid.appendChild(b);
     });
   }
+  // Each photo has a small copy for the grid in images/thumbs/ (same file name). If it is missing, the full photo is used.
+  function thumbOf(u) { return u.replace("images/", "images/thumbs/"); }
   function probe() { GALLERY.forEach(function (g, i) {
+    var alt = g.alt || "Photo of Md Imran Sardar";
+    function done() { if (!--pending) { found = found.filter(Boolean); draw(); } }
     var t = new Image();
-    t.onload = function () { found[i] = { src: g.src, alt: g.alt || "Photo of Md Imran Sardar" }; if (!--pending) { found = found.filter(Boolean); draw(); } };
-    t.onerror = function () { if (!--pending) { found = found.filter(Boolean); draw(); } };
-    t.src = g.src;
+    t.onload = function () { found[i] = { src: g.src, thumb: thumbOf(g.src), alt: alt }; done(); };
+    t.onerror = function () {
+      var f = new Image();
+      f.onload = function () { found[i] = { src: g.src, thumb: g.src, alt: alt }; done(); };
+      f.onerror = done;
+      f.src = g.src;
+    };
+    t.src = thumbOf(g.src);
   }); }
   if (document.readyState === "complete") probe(); else addEventListener("load", probe);
   if (!GALLERY.length) draw();
