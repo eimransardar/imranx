@@ -101,3 +101,10 @@ var NAMES = { facebook: "Facebook", x: "X", linkedin: "LinkedIn", medium: "Mediu
     addEventListener("scroll", upd, { passive: true }); upd();
   }
 })();
+
+/* Language switcher: loads translate.js on every page (the file must sit next to this one) */
+(function () {
+  var s = document.createElement("script");
+  s.src = "translate.js"; s.defer = true;
+  document.head.appendChild(s);
+})();

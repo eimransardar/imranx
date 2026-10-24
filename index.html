@@ -203,6 +203,37 @@ textarea { min-height: 140px; resize: vertical; }
 #formMsg { font-size: 15px; color: var(--accent); min-height: 1.4em; }
 @media (max-width: 820px) { .contact { grid-template-columns: 1fr; gap: 36px; } }
 @media (prefers-reduced-motion: reduce) { .fill, .card, .post, .btn, .shot img { transition: none; } }
+
+/* books */
+.books-wrap { position: relative; }
+.books { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-block: 4px 12px; margin-inline: -2px; padding-inline: 2px; scrollbar-width: thin; }
+.book { flex: 0 0 calc((100% - 60px) / 4); min-width: 200px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px; }
+.book .cover { display: block; aspect-ratio: 2 / 3; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--accent-soft); box-shadow: 0 10px 24px rgba(16, 24, 40, .12); transition: transform .2s ease, box-shadow .2s ease; }
+.book .cover:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(16, 24, 40, .18); }
+.book .cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.book h3 { font-size: 19px; line-height: 1.4; margin-top: 6px; }
+.book h3 a { text-decoration: none; }
+.book h3 a:hover { color: var(--accent); }
+.book p { color: var(--muted); font-size: 15px; line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.book .more { margin-top: auto; color: var(--accent); font-weight: 600; font-size: 14.5px; text-decoration: none; }
+.book .more:hover { text-decoration: underline; }
+.car-btn { position: absolute; top: 34%; z-index: 2; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; box-shadow: 0 6px 16px rgba(16, 24, 40, .18); display: grid; place-items: center; }
+.car-btn:hover { background: var(--accent-soft); }
+.car-btn[disabled] { opacity: 0; pointer-events: none; }
+.car-btn.prev { left: -14px; } .car-btn.next { right: -14px; }
+@media (max-width: 900px) { .book { flex-basis: calc((100% - 20px) / 2); } }
+@media (max-width: 560px) { .book { flex-basis: 70%; } .car-btn { display: none; } }
+
+/* resources */
+.res-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.res { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px; text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
+.res:hover { border-color: var(--accent); transform: translateY(-3px); }
+.res .rtype { align-self: flex-start; font-family: var(--font-mono); font-size: 12px; padding: 3px 10px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); }
+.res h3 { font-size: 19px; line-height: 1.4; margin-top: 6px; }
+.res p { color: var(--muted); font-size: 15.5px; line-height: 1.7; }
+.res .rsrc { margin-top: auto; padding-top: 6px; font-family: var(--font-mono); font-size: 12.5px; color: var(--accent); overflow-wrap: anywhere; }
+@media (max-width: 760px) { .res-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .book .cover, .res, .books { transition: none; scroll-behavior: auto; } }
 </style>
 </head>
 <body>
@@ -217,8 +248,10 @@ textarea { min-height: 140px; resize: vertical; }
         <li><a href="#experience">Experience</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#work">Work</a></li>
+        <li><a href="#books">Books</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
+        <li><a href="#resources">Resources</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -337,6 +370,51 @@ textarea { min-height: 140px; resize: vertical; }
     </div>
   </section>
 
+  <!-- BOOKS (author). To change a book: edit the title, the short intro, the cover image and the link. Copy a whole <article class="book"> block to add one, delete one to remove it.
+       Cover images go in images/books/ (about 400 x 600 px, JPG). The link can be a blog post (for example "my-book-post.html") or a shop page (for example "https://your-shop.com/book"). -->
+  <section id="books">
+    <div class="sec-head">
+      <div><p class="eyebrow">Author</p><h2>My books</h2></div>
+      <a class="btn ghost" href="blog.html">All books →</a>
+    </div>
+    <div class="books-wrap">
+      <button class="car-btn prev" type="button" aria-label="Previous books" disabled>‹</button>
+      <div class="books" id="books-row">
+        <article class="book">
+          <a class="cover" href="blog.html" aria-label="Your Book Title 1"><img src="images/books/book-1.jpg" alt="Cover of Your Book Title 1" width="400" height="600" loading="lazy"></a>
+          <h3><a href="blog.html">Your Book Title 1</a></h3>
+          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="more" href="blog.html">Read more →</a>
+        </article>
+        <article class="book">
+          <a class="cover" href="blog.html" aria-label="Your Book Title 2"><img src="images/books/book-2.jpg" alt="Cover of Your Book Title 2" width="400" height="600" loading="lazy"></a>
+          <h3><a href="blog.html">Your Book Title 2</a></h3>
+          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="more" href="blog.html">Read more →</a>
+        </article>
+        <article class="book">
+          <a class="cover" href="blog.html" aria-label="Your Book Title 3"><img src="images/books/book-3.jpg" alt="Cover of Your Book Title 3" width="400" height="600" loading="lazy"></a>
+          <h3><a href="blog.html">Your Book Title 3</a></h3>
+          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="more" href="blog.html">Read more →</a>
+        </article>
+        <article class="book">
+          <a class="cover" href="blog.html" aria-label="Your Book Title 4"><img src="images/books/book-4.jpg" alt="Cover of Your Book Title 4" width="400" height="600" loading="lazy"></a>
+          <h3><a href="blog.html">Your Book Title 4</a></h3>
+          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="more" href="blog.html">Read more →</a>
+        </article>
+        <article class="book">
+          <a class="cover" href="blog.html" aria-label="Your Book Title 5"><img src="images/books/book-5.jpg" alt="Cover of Your Book Title 5" width="400" height="600" loading="lazy"></a>
+          <h3><a href="blog.html">Your Book Title 5</a></h3>
+          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="more" href="blog.html">Read more →</a>
+        </article>
+      </div>
+      <button class="car-btn next" type="button" aria-label="Next books">›</button>
+    </div>
+  </section>
+
   <!-- GALLERY -->
   <section id="gallery">
     <div class="sec-head">
@@ -380,6 +458,23 @@ textarea { min-height: 140px; resize: vertical; }
           <span class="more">Read →</span>
         </div>
       </a>
+    </div>
+  </section>
+
+  <!-- RESOURCES & RESEARCH. To change one: edit the link, the label (Research, Course, Tool...), the title and the one-line note. Copy a whole <a class="res"> block to add one.
+       These six are examples with real links. Replace them with your own. -->
+  <section id="resources">
+    <div class="sec-head">
+      <div><p class="eyebrow">Resources</p><h2>Research &amp; useful links</h2></div>
+      <p>Papers, courses and tools that anyone can open and check for themselves.</p>
+    </div>
+    <div class="res-grid">
+      <a class="res" href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener noreferrer"><span class="rtype">Research</span><h3>Attention Is All You Need</h3><p>The paper that introduced the Transformer, the idea behind today’s large language models.</p><span class="rsrc">arxiv.org ↗</span></a>
+      <a class="res" href="https://cs50.harvard.edu/x/" target="_blank" rel="noopener noreferrer"><span class="rtype">Course</span><h3>CS50: Introduction to Computer Science</h3><p>Harvard’s free course, a strong start for anyone learning to program.</p><span class="rsrc">cs50.harvard.edu ↗</span></a>
+      <a class="res" href="https://www.kaggle.com/datasets" target="_blank" rel="noopener noreferrer"><span class="rtype">Data</span><h3>Kaggle Datasets</h3><p>Open datasets for practising data science on real problems.</p><span class="rsrc">kaggle.com ↗</span></a>
+      <a class="res" href="https://quran.com" target="_blank" rel="noopener noreferrer"><span class="rtype">Quran</span><h3>Quran.com</h3><p>Read the Qur’an with many translations and recitations.</p><span class="rsrc">quran.com ↗</span></a>
+      <a class="res" href="https://scholar.google.com" target="_blank" rel="noopener noreferrer"><span class="rtype">Search</span><h3>Google Scholar</h3><p>Find scholarly papers and see who has cited them.</p><span class="rsrc">scholar.google.com ↗</span></a>
+      <a class="res" href="https://web.dev" target="_blank" rel="noopener noreferrer"><span class="rtype">Guide</span><h3>web.dev</h3><p>Google’s guides to building fast, secure and accessible websites.</p><span class="rsrc">web.dev ↗</span></a>
     </div>
   </section>
 
@@ -439,6 +534,7 @@ textarea { min-height: 140px; resize: vertical; }
 </div>
 
 <script src="site.js"></script>
+<script src="translate.js" defer></script>
 <script>
 /* ============ EDIT THESE ============ */
 var BIRTH = new Date("1991-06-06T00:00:00+06:00"); // set the real date of birth
@@ -523,6 +619,19 @@ setInterval(tick, reduce ? 1000 : 80);
   addEventListener("keydown", function (e) { if (e.key === "Escape" && !$("lightbox").hidden) close(); });
 })();
 
+/* Books carousel arrows */
+(function () {
+  var row = $("books-row"), prev = document.querySelector(".car-btn.prev"), next = document.querySelector(".car-btn.next");
+  if (!row || !prev || !next) return;
+  function state() { prev.disabled = row.scrollLeft < 4; next.disabled = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4; }
+  function step(dir) { var c = row.querySelector(".book"); row.scrollBy({ left: dir * (c.offsetWidth + 20), behavior: reduce ? "auto" : "smooth" }); }
+  prev.addEventListener("click", function () { step(-1); });
+  next.addEventListener("click", function () { step(1); });
+  row.addEventListener("scroll", state, { passive: true });
+  addEventListener("resize", state);
+  state();
+})();
+
 /* Nav highlight while scrolling */
 var links = [].slice.call(document.querySelectorAll("#nav a"));
 var spy = new IntersectionObserver(function (es) {
@@ -530,7 +639,7 @@ var spy = new IntersectionObserver(function (es) {
     if (e.isIntersecting) links.forEach(function (l) { l.classList.toggle("on", l.getAttribute("href") === "#" + e.target.id); });
   });
 }, { rootMargin: "-40% 0px -55% 0px" });
-["about", "education", "experience", "services", "work", "gallery", "blog", "contact"].forEach(function (id) { spy.observe($(id)); });
+["about", "education", "experience", "services", "work", "books", "gallery", "blog", "resources", "contact"].forEach(function (id) { spy.observe($(id)); });
 
 /* Contact form */
 $("form").addEventListener("submit", function (e) {
