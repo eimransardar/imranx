@@ -8,10 +8,11 @@
   window.__ixLang = true;
 
   var LANGS = [
-    ["en", "English", "EN"], ["bn", "বাংলা", "BN"], ["ar", "العربية", "AR"], ["zh-CN", "中文 (简体)", "ZH"],
-    ["nl", "Nederlands", "NL"], ["fr", "Français", "FR"], ["de", "Deutsch", "DE"], ["hi", "हिन्दी", "HI"],
-    ["id", "Bahasa Indonesia", "ID"], ["ja", "日本語", "JA"], ["ko", "한국어", "KO"], ["ms", "Bahasa Melayu", "MS"],
-    ["pt", "Português", "PT"], ["ru", "Русский", "RU"], ["es", "Español", "ES"], ["tr", "Türkçe", "TR"], ["ur", "اردو", "UR"]
+    ["en", "English", "EN"], ["bn", "বাংলা", "BN"], ["zh-CN", "中文 (简体)", "ZH"], ["zh-TW", "中文 (繁體)", "TW"],
+    ["ja", "日本語", "JA"], ["ur", "اردو", "UR"], ["ar", "العربية", "AR"], ["nl", "Nederlands", "NL"],
+    ["fr", "Français", "FR"], ["de", "Deutsch", "DE"], ["hi", "हिन्दी", "HI"], ["id", "Bahasa Indonesia", "ID"],
+    ["ko", "한국어", "KO"], ["ms", "Bahasa Melayu", "MS"], ["pt", "Português", "PT"], ["ru", "Русский", "RU"],
+    ["es", "Español", "ES"], ["tr", "Türkçe", "TR"]
   ];
   var SRC = (document.documentElement.lang || "en").split("-")[0];   // language the page is written in
   var KEY = "ix-lang", loaded = false;
