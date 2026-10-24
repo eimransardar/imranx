@@ -214,7 +214,7 @@ textarea { min-height: 140px; resize: vertical; }
 .book h3 { font-size: 19px; line-height: 1.4; margin-top: 6px; }
 .book h3 a { text-decoration: none; }
 .book h3 a:hover { color: var(--accent); }
-.book p { color: var(--muted); font-size: 15px; line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.book p { color: var(--muted); font-size: 15px; line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
 .book .more { margin-top: auto; color: var(--accent); font-weight: 600; font-size: 14.5px; text-decoration: none; }
 .book .more:hover { text-decoration: underline; }
 .car-btn { position: absolute; top: 34%; z-index: 2; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; box-shadow: 0 6px 16px rgba(16, 24, 40, .18); display: grid; place-items: center; }
@@ -371,7 +371,7 @@ textarea { min-height: 140px; resize: vertical; }
   </section>
 
   <!-- BOOKS (author). To change a book: edit the title, the short intro, the cover image and the link. Copy a whole <article class="book"> block to add one, delete one to remove it.
-       Cover images go in images/books/ (about 400 x 600 px, JPG). The link can be a blog post (for example "my-book-post.html") or a shop page (for example "https://your-shop.com/book"). -->
+       Cover images go in images/books/ (480 x 720 px, JPG, under 40 KB). The link can be a blog post (for example "my-book-post.html") or a shop page (for example "https://your-shop.com/book"). -->
   <section id="books">
     <div class="sec-head">
       <div><p class="eyebrow">Author</p><h2>My books</h2></div>
@@ -381,33 +381,39 @@ textarea { min-height: 140px; resize: vertical; }
       <button class="car-btn prev" type="button" aria-label="Previous books" disabled>‹</button>
       <div class="books" id="books-row">
         <article class="book">
-          <a class="cover" href="blog.html" aria-label="Your Book Title 1"><img src="images/books/book-1.jpg" alt="Cover of Your Book Title 1" width="400" height="600" loading="lazy"></a>
-          <h3><a href="blog.html">Your Book Title 1</a></h3>
-          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="cover" href="blog.html" aria-label="Art of Thought following Quran"><img src="images/books/art-of-thought-following-quran.jpg" alt="Cover of Art of Thought following Quran, by Engineer Md Imran Sardar" width="480" height="720" loading="lazy"></a>
+          <h3><a href="blog.html">Art of Thought following Quran</a></h3>
+          <p>The Quran asks us again and again to think, reflect and reason. This book shows how to train the mind to think clearly and live with purpose.</p>
           <a class="more" href="blog.html">Read more →</a>
         </article>
         <article class="book">
-          <a class="cover" href="blog.html" aria-label="Your Book Title 2"><img src="images/books/book-2.jpg" alt="Cover of Your Book Title 2" width="400" height="600" loading="lazy"></a>
-          <h3><a href="blog.html">Your Book Title 2</a></h3>
-          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="cover" href="blog.html" aria-label="Rizq Philosophy"><img src="images/books/rizq-philosophy.jpg" alt="Cover of Rizq Philosophy, by Engineer Md Imran Sardar" width="480" height="720" loading="lazy"></a>
+          <h3><a href="blog.html">Rizq Philosophy</a></h3>
+          <p>What does rizq really mean? Look beyond income to health, time, knowledge, family and peace, and see how effort and trust in Allah work together.</p>
           <a class="more" href="blog.html">Read more →</a>
         </article>
         <article class="book">
-          <a class="cover" href="blog.html" aria-label="Your Book Title 3"><img src="images/books/book-3.jpg" alt="Cover of Your Book Title 3" width="400" height="600" loading="lazy"></a>
-          <h3><a href="blog.html">Your Book Title 3</a></h3>
-          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="cover" href="blog.html" aria-label="Quantum Universe"><img src="images/books/quantum-universe.jpg" alt="Cover of Quantum Universe, by Engineer Md Imran Sardar" width="480" height="720" loading="lazy"></a>
+          <h3><a href="blog.html">Quantum Universe</a></h3>
+          <p>A reflective journey through the order of the universe, from the tiny atom to the vast cosmos, read in the light of the Quran and modern science.</p>
           <a class="more" href="blog.html">Read more →</a>
         </article>
         <article class="book">
-          <a class="cover" href="blog.html" aria-label="Your Book Title 4"><img src="images/books/book-4.jpg" alt="Cover of Your Book Title 4" width="400" height="600" loading="lazy"></a>
-          <h3><a href="blog.html">Your Book Title 4</a></h3>
-          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="cover" href="blog.html" aria-label="Rizq Engineering: Secrets of Rizq"><img src="images/books/rizq-engineering.jpg" alt="Cover of Rizq Engineering: Secrets of Rizq, by Engineer Md Imran Sardar" width="480" height="720" loading="lazy"></a>
+          <h3><a href="blog.html">Rizq Engineering: Secrets of Rizq</a></h3>
+          <p>A practical, engineer’s view of rizq: the skills, honesty, planning and trust that open the way to halal provision, explained step by step.</p>
           <a class="more" href="blog.html">Read more →</a>
         </article>
         <article class="book">
-          <a class="cover" href="blog.html" aria-label="Your Book Title 5"><img src="images/books/book-5.jpg" alt="Cover of Your Book Title 5" width="400" height="600" loading="lazy"></a>
-          <h3><a href="blog.html">Your Book Title 5</a></h3>
-          <p>Write two or three lines about this book here: what it is about and who it is for.</p>
+          <a class="cover" href="blog.html" aria-label="Quran Everywhere"><img src="images/books/quran-everywhere.jpg" alt="Cover of Quran Everywhere, by Engineer Md Imran Sardar" width="480" height="720" loading="lazy"></a>
+          <h3><a href="blog.html">Quran Everywhere</a></h3>
+          <p>How to bring the Quran into home, work, study, travel and technology, so its guidance becomes part of every ordinary day.</p>
+          <a class="more" href="blog.html">Read more →</a>
+        </article>
+        <article class="book">
+          <a class="cover" href="blog.html" aria-label="Sufism in this AI Age"><img src="images/books/sufism-in-this-ai-age.jpg" alt="Cover of Sufism in this AI Age, by Engineer Md Imran Sardar" width="480" height="720" loading="lazy"></a>
+          <h3><a href="blog.html">Sufism in this AI Age</a></h3>
+          <p>In a world of algorithms and noise, what is real Sufism? A calm, careful look at purifying the heart, sincerity and remembrance of Allah, free from myths.</p>
           <a class="more" href="blog.html">Read more →</a>
         </article>
       </div>
