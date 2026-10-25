@@ -102,6 +102,34 @@ var NAMES = { facebook: "Facebook", x: "X", linkedin: "LinkedIn", medium: "Mediu
   }
 })();
 
+/* Menu: add the Books and Resources links on pages that do not have them yet (blog, articles), in the same order as the homepage */
+(function () {
+  var ul = document.querySelector("#nav ul");
+  if (!ul) return;
+  function add(label, hash, before) {
+    if (ul.querySelector('a[href$="' + hash + '"]')) return;
+    var ref = ul.querySelector('a[href$="' + before + '"]');
+    var li = document.createElement("li"), a = document.createElement("a");
+    a.href = "index.html" + hash; a.textContent = label; li.appendChild(a);
+    if (ref && ref.parentNode) ul.insertBefore(li, ref.parentNode); else ul.appendChild(li);
+  }
+  add("Books", "#books", "#gallery");
+  add("Resources", "#resources", "#contact");
+})();
+
+/* Footer year: shows "© 2010–2026" and updates the end year by itself on every page (Bangla pages use Bangla digits).
+   Change FOOTER_SINCE to your first year. */
+var FOOTER_SINCE = 2010;
+(function () {
+  var now = new Date().getFullYear();
+  var text = FOOTER_SINCE >= now ? String(now) : FOOTER_SINCE + "\u2013" + now;
+  var bn = text.replace(/\d/g, function (d) { return "০১২৩৪৫৬৭৮৯".charAt(d); });
+  document.querySelectorAll("footer").forEach(function (f) {
+    var w = document.createTreeWalker(f, NodeFilter.SHOW_TEXT), n;
+    while ((n = w.nextNode())) n.nodeValue = n.nodeValue.replace(/(©\s*)(?:[০-৯\d]{4}\s*[\u2013-]\s*)?([০-৯]{4}|\d{4})/, function (m, pre, last) { return pre + (/[০-৯]/.test(last) ? bn : text); });
+  });
+})();
+
 /* Language switcher: loads translate.js on every page (the file must sit next to this one) */
 (function () {
   var s = document.createElement("script");
